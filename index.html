@@ -1270,9 +1270,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
 <!-- ============================================== -->
 <header class="site-header" id="header">
     <div class="container header-inner">
-        <a href="#" class="logo">
-            <img src="logo.jpeg" alt="Logo" style="height:44px;width:auto;display:block;">
-        </a>
+        <a href="#" class="logo" id="header-logo"></a>
 
         <nav>
             <ul class="nav-links">
@@ -1284,8 +1282,8 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
         </nav>
 
         <div class="header-cta">
-            <!-- ⚠️ SUBSTITUIR número do WhatsApp abaixo -->
-            <a href="https://wa.me/5531999999999?text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn btn-primary" target="_blank" rel="noopener">
+            <!-- WhatsApp preenchido pelo CONFIG -->
+            <a id="btn-whatsapp-header" class="btn btn-primary" target="_blank" rel="noopener">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
                 WhatsApp
             </a>
@@ -1319,8 +1317,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
             </p>
 
             <div class="hero-ctas">
-                <!-- ⚠️ SUBSTITUIR número do WhatsApp abaixo -->
-                <a href="https://wa.me/5531999999999?text=Ol%C3%A1%20Carlos%2C%20gostaria%20de%20um%20or%C3%A7amento" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+                <a id="btn-whatsapp-hero" class="btn btn-primary btn-large" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
                     Pedir Orçamento Grátis
                 </a>
@@ -1612,13 +1609,9 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
             <h2 class="display">Quem contratou <em>recomenda.</em></h2>
         </div>
 
-        <div class="testimonials-track" id="reviews-track">
-            <!-- preenchido automaticamente pelo JS -->
-        </div>
+        <div class="testimonials-track" id="reviews-track"></div>
 
-        <div class="google-badge reveal" id="google-badge">
-            <!-- preenchido automaticamente pelo JS -->
-        </div>
+        <div class="google-badge reveal" id="google-badge"></div>
     </div>
 </section>
 
@@ -1757,13 +1750,12 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
                 <h3 class="display">Estou online no <em>WhatsApp.</em></h3>
                 <p>Resposta em até 1 hora durante o horário comercial. Manda foto, vídeo, áudio — fica à vontade.</p>
 
-                <!-- ⚠️ SUBSTITUIR número do WhatsApp -->
-                <a href="https://wa.me/5531999999999?text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20site%21" target="_blank" rel="noopener" class="contact-whatsapp">
+                <a id="btn-whatsapp-contact" target="_blank" rel="noopener" class="contact-whatsapp">
                     <div class="icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
                     </div>
                     <div class="text">
-                        <strong>(31) 9 9999-9999</strong>
+                        <strong id="contact-phone-display"></strong>
                         <span>Tocar para abrir o WhatsApp</span>
                     </div>
                 </a>
@@ -1800,9 +1792,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo">
-                    <img src="logo.jpeg" alt="Logo" style="height:44px;width:auto;display:block;">
-                </a>
+                <a href="#" class="logo" id="footer-logo"></a>
                 <p>Pintura residencial e técnicas decorativas em Belo Horizonte. Acabamento de luxo, atendimento humano.</p>
 
                 <div class="footer-social">
@@ -1813,7 +1803,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
                     <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                     </a>
-                    <a href="https://wa.me/5531999999999" target="_blank" aria-label="WhatsApp">
+                    <a id="footer-social-wa" target="_blank" aria-label="WhatsApp">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
                     </a>
                 </div>
@@ -1844,7 +1834,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
             <div class="footer-col">
                 <h5>Contato</h5>
                 <ul>
-                    <li><a href="https://wa.me/5531999999999">(31) 9 9999-9999</a></li>
+                    <li><a id="footer-phone-link"></a></li>
                     <li><a href="#orcamento">Orçamento grátis</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#depoimentos">Avaliações Google</a></li>
@@ -1853,7 +1843,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
         </div>
 
         <div class="footer-bottom">
-            <span>© 2026 Hr pinturas e acabamentos BH. Todos os direitos reservados.</span>
+            <span>© 2026 Carlos Castro Pintor BH. Todos os direitos reservados.</span>
             <span>Feito com cuidado em Belo Horizonte / MG</span>
         </div>
     </div>
@@ -1862,59 +1852,87 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
 <!-- ============================================== -->
 <!-- FLOATING WHATSAPP                               -->
 <!-- ============================================== -->
-<!-- ⚠️ SUBSTITUIR número do WhatsApp -->
-<a href="https://wa.me/5531999999999?text=Ol%C3%A1%20Carlos%2C%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="whatsapp-float" id="whatsappFloat">
+<a id="whatsappFloat" target="_blank" rel="noopener" class="whatsapp-float">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
     <span class="text-label">Fale agora</span>
 </a>
 
 <script>
-// ╔══════════════════════════════════════════════════════╗
-// ║           ✏️  ÁREA DE CONFIGURAÇÃO DO SITE           ║
-// ║      Edite apenas aqui — nada mais precisa mexer     ║
-// ╚══════════════════════════════════════════════════════╝
+// ╔══════════════════════════════════════════════════════════════╗
+// ║              ✏️  ÁREA DE CONFIGURAÇÃO DO SITE                ║
+// ║         Edite só aqui — o resto do site atualiza sozinho     ║
+// ╚══════════════════════════════════════════════════════════════╝
 
 const CONFIG = {
 
-  // Número do WhatsApp (somente dígitos, com DDI)
+  // Número do WhatsApp (só dígitos, com DDI)
   whatsapp: '5531992095724',
 
-  // Nota e total de avaliações (aparece na hero e no badge)
+  // Número formatado para exibir na tela (ex: seção de contato)
+  whatsapp_exibicao: '(31) 9 9209-5724',
+
+  // Nota e total de avaliações — aparece na hero badge e no banner abaixo
   google_nota:  '5',
   google_total: '+26',
 
   // Avaliações do Google — adicione ou remova objetos à vontade
   reviews: [
     {
-      nome:     'Luana A.',
-      local:    'Apartamento · Savassi · via Google',
-      texto:    'Trabalho de pintura completa do apartamento realizado em tempo recorde, com acabamento impecável. Necessitei do serviço com urgência e fui prontamente atendido por um bom preço.',
+      nome:  'Luana A.',
+      local: 'Apartamento · Savassi · via Google',
+      texto: 'Excelente trabalho! Caprichoso, comprometido e atencioso em cada detalhe. Deixou tudo limpo, organizado e muito bem feito. Ótimo serviço!',
     },
     {
-      nome:     'Mariana S.',
-      local:    'Casa · Buritis · via Google',
-      texto:    'Profissional que responde rápido no WhatsApp, passa orçamento honesto. Trabalho de muita qualidade, usa material de primeira. Pintura externa, interna e tudo entregue sem ressalvas.',
+      nome:  'Mariana S.',
+      local: 'Casa · Buritis · via Google',
+      texto: 'Profissional que responde rápido no WhatsApp, passa orçamento honesto. Trabalho de muita qualidade, usa material de primeira. Pintura externa, interna e tudo entregue sem ressalvas.',
     },
     {
-      nome:     'Juliana R.',
-      local:    'Apartamento · Belvedere · via Google',
-      texto:    'Fez o cimento queimado da minha sala e ficou exatamente como eu sonhava. Atencioso, pontual, limpo. Já indiquei para três amigas que também ficaram encantadas com o resultado.',
+      nome:  'Juliana R.',
+      local: 'Apartamento · Belvedere · via Google',
+      texto: 'Fez o cimento queimado da minha sala e ficou exatamente como eu sonhava. Atencioso, pontual, limpo. Já indiquei para três amigas que também ficaram encantadas com o resultado.',
     },
   ],
 
 };
 
-// ══════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════
 //  NÃO EDITE ABAIXO — código automático
-// ══════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════
 
-// Preenche hero rating
+function waLink(msg) {
+  return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+}
+
+// LOGO — header e footer
+const logoImg = `<img src="logo.jpg" alt="Logo" style="height:44px;width:auto;display:block;">`;
+document.getElementById('header-logo').innerHTML = logoImg;
+document.getElementById('footer-logo').innerHTML  = logoImg;
+
+// HERO RATING
 document.getElementById('hero-rating-text').textContent =
   `${CONFIG.google_nota} no Google · ${CONFIG.google_total} avaliações`;
 
-// Preenche cards de reviews
+// WHATSAPP — todos os botões e links
+const msgOrcamento = 'Olá! Vim pelo site e gostaria de um orçamento';
+const msgContato   = 'Olá! Vim pelo site!';
+
+document.getElementById('btn-whatsapp-header').href  = waLink(msgOrcamento);
+document.getElementById('btn-whatsapp-hero').href    = waLink(msgOrcamento);
+document.getElementById('btn-whatsapp-contact').href = waLink(msgContato);
+document.getElementById('whatsappFloat').href        = waLink(msgOrcamento);
+document.getElementById('footer-social-wa').href     = `https://wa.me/${CONFIG.whatsapp}`;
+
+const footerPhone = document.getElementById('footer-phone-link');
+footerPhone.href        = `https://wa.me/${CONFIG.whatsapp}`;
+footerPhone.textContent = CONFIG.whatsapp_exibicao;
+
+const contactDisplay = document.getElementById('contact-phone-display');
+if (contactDisplay) contactDisplay.textContent = CONFIG.whatsapp_exibicao;
+
+// REVIEWS — renderiza os cards dinamicamente
 const delays = ['', 'reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3'];
-const track = document.getElementById('reviews-track');
+const track  = document.getElementById('reviews-track');
 CONFIG.reviews.forEach((r, i) => {
   const inicial = r.nome.charAt(0).toUpperCase();
   track.innerHTML += `
@@ -1931,7 +1949,7 @@ CONFIG.reviews.forEach((r, i) => {
     </div>`;
 });
 
-// Preenche google badge
+// GOOGLE BADGE (banner escuro abaixo das reviews)
 document.getElementById('google-badge').innerHTML = `
   <span class="rating">${CONFIG.google_nota}</span>
   <span>
@@ -1939,7 +1957,7 @@ document.getElementById('google-badge').innerHTML = `
     <div class="info">Baseado em ${CONFIG.google_total} avaliações reais no Google</div>
   </span>`;
 
-// Header scroll effect
+// HEADER SCROLL
 const header = document.getElementById('header');
 const whatsappFloat = document.getElementById('whatsappFloat');
 window.addEventListener('scroll', () => {
@@ -1947,14 +1965,14 @@ window.addEventListener('scroll', () => {
     whatsappFloat.classList.toggle('visible', window.scrollY > 400);
 });
 
-// Mobile menu
+// MOBILE MENU
 const menuToggle = document.getElementById('menuToggle');
 menuToggle.addEventListener('click', () => document.body.classList.toggle('mobile-menu-open'));
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => document.body.classList.remove('mobile-menu-open'));
 });
 
-// FAQ accordion
+// FAQ ACCORDION
 document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
         const item = btn.parentElement;
@@ -1964,7 +1982,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     });
 });
 
-// Scroll reveal
+// SCROLL REVEAL
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1975,7 +1993,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Form → WhatsApp
+// FORM → WHATSAPP
 document.getElementById('orcamentoForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const nome     = document.getElementById('nome').value;
@@ -1984,14 +2002,14 @@ document.getElementById('orcamentoForm').addEventListener('submit', (e) => {
     const servico  = document.getElementById('servico').value;
     const mensagem = document.getElementById('mensagem').value;
 
-    let texto = `Olá! Vim pelo site e gostaria de um orçamento.%0A%0A`;
-    texto += `*Nome:* ${nome}%0A`;
-    texto += `*WhatsApp:* ${telefone}%0A`;
-    texto += `*Localização:* ${bairro}%0A`;
+    let texto = `Olá! Vim pelo site e gostaria de um orçamento.\n\n`;
+    texto += `*Nome:* ${nome}\n`;
+    texto += `*WhatsApp:* ${telefone}\n`;
+    texto += `*Localização:* ${bairro}\n`;
     texto += `*Serviço de interesse:* ${servico}`;
-    if (mensagem) texto += `%0A%0A*Detalhes:* ${mensagem}`;
+    if (mensagem) texto += `\n\n*Detalhes:* ${mensagem}`;
 
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${texto}`, '_blank');
+    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`, '_blank');
 });
 
 </script>

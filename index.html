@@ -609,6 +609,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
 }
 @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
 
 .service-card {
     background: white;
@@ -983,13 +984,25 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
     display: grid;
     grid-template-columns: 1.2fr 1fr;
 }
-@media (max-width: 900px) { .contact-card { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+        overflow: visible;
+        border-radius: var(--radius-md);
+    }
+}
 
 .contact-form-side {
     padding: 60px 50px;
     background: var(--color-cream);
 }
-@media (max-width: 600px) { .contact-form-side { padding: 40px 28px; } }
+@media (max-width: 900px) {
+    .contact-form-side {
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
+        padding: 40px 24px;
+    }
+}
+@media (max-width: 600px) { .contact-form-side { padding: 36px 20px; } }
 
 .contact-form-side .eyebrow { color: var(--color-gold); }
 .contact-form-side h2 {
@@ -1049,7 +1062,13 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
         var(--color-ink);
     position: relative;
 }
-@media (max-width: 600px) { .contact-side { padding: 40px 28px; } }
+@media (max-width: 900px) {
+    .contact-side {
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+        padding: 40px 24px;
+    }
+}
+@media (max-width: 600px) { .contact-side { padding: 36px 20px; } }
 
 .contact-side .eyebrow { color: var(--color-gold-soft); }
 .contact-side h3 {
@@ -1357,7 +1376,7 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
                 <div class="trust-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <div class="trust-text"><strong>4,9 / 5</strong><span>Avaliação no Google</span></div>
+                <div class="trust-text"><strong id="trust-google-nota">4,9 / 5</strong><span>Avaliação no Google</span></div>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">
@@ -1873,7 +1892,7 @@ const CONFIG = {
 
   // Nota e total de avaliações — aparece na hero badge e no banner abaixo
   google_nota:  '5',
-  google_total: '+26',
+  google_total: '+29',
 
   // Avaliações do Google — adicione ou remova objetos à vontade
   reviews: [
@@ -1912,6 +1931,10 @@ document.getElementById('footer-logo').innerHTML  = logoImg;
 // HERO RATING
 document.getElementById('hero-rating-text').textContent =
   `${CONFIG.google_nota} no Google · ${CONFIG.google_total} avaliações`;
+
+// TRUST STRIP RATING
+document.getElementById('trust-google-nota').textContent =
+  `${CONFIG.google_nota} / 5`;
 
 // WHATSAPP — todos os botões e links
 const msgOrcamento = 'Olá! Vim pelo site e gostaria de um orçamento';

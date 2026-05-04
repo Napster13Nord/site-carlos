@@ -1,60 +1,3 @@
-<!--
-╔══════════════════════════════════════════════════════════════╗
-║              ⚙️  CONFIGURAÇÕES DO SITE                       ║
-║         Edite apenas esta seção para personalizar            ║
-╚══════════════════════════════════════════════════════════════╝
-
-  📁 ARQUIVOS NO REPOSITÓRIO:
-     index.html   → este arquivo
-     logo.*       → seu arquivo de logo (ex: logo.png, logo.svg)
-     hero.*       → imagem principal do hero (ex: hero.jpg, hero.webp)
-
-══════════════════════════════════════════════════════════════
-  1. LOGO
-     Coloque o nome do arquivo do logo abaixo (com extensão).
-     Ex: "logo.png" ou "logo.svg"
-     Deixe vazio ("") para usar o logo de texto padrão.
-══════════════════════════════════════════════════════════════
-  LOGO_FILE = "logo.png"
-
-══════════════════════════════════════════════════════════════
-  2. HERO IMAGE (imagem principal)
-     Coloque o nome do arquivo da imagem hero abaixo.
-     Ex: "hero.jpg" ou "hero.webp"
-     Deixe vazio ("") para usar o gradiente decorativo padrão.
-══════════════════════════════════════════════════════════════
-  HERO_FILE = "hero.jpg"
-
-══════════════════════════════════════════════════════════════
-  3. AVALIAÇÕES DO GOOGLE
-     Atualize os dados abaixo com suas avaliações reais.
-     Para cada avaliação: inicial do nome, nome, texto, local.
-══════════════════════════════════════════════════════════════
-  GOOGLE_RATING     = "5"        ← nota geral
-  GOOGLE_TOTAL      = "+29"        ← total de avaliações
-
-  REVIEW_1_INITIAL  = "L"          ← 1ª letra do nome
-  REVIEW_1_NAME     = "Luana Amorim."
-  REVIEW_1_TEXT     = "Excelente trabalho! Caprichoso, comprometido e atencioso em cada detalhe. Deixou tudo limpo, organizado e muito bem feito. Ótimo serviço!"
-  REVIEW_1_LOCATION = "Apartamento · Savassi · via Google"
-
-  REVIEW_2_INITIAL  = "M"
-  REVIEW_2_NAME     = "Mariana S."
-  REVIEW_2_TEXT     = "Profissional que responde rápido no WhatsApp, passa orçamento honesto. Trabalho de muita qualidade, usa material de primeira."
-  REVIEW_2_LOCATION = "Casa · Buritis · via Google"
-
-  REVIEW_3_INITIAL  = "J"
-  REVIEW_3_NAME     = "Juliana R."
-  REVIEW_3_TEXT     = "Fez o cimento queimado da minha sala e ficou exatamente como eu sonhava. Atencioso, pontual, limpo. Já indiquei para três amigas."
-  REVIEW_3_LOCATION = "Apartamento · Belvedere · via Google"
-
-══════════════════════════════════════════════════════════════
-  ⚠️ DEPOIS DE EDITAR AQUI, busque no arquivo os comentários
-     com a tag  [CONFIG]  para aplicar os mesmos valores
-     nos lugares onde eles aparecem no HTML/JS.
-     (Ctrl+F → "[CONFIG]")
-╚══════════════════════════════════════════════════════════════
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1327,11 +1270,8 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
 <!-- ============================================== -->
 <header class="site-header" id="header">
     <div class="container header-inner">
-        <!-- [CONFIG] LOGO — troque pelo arquivo definido em LOGO_FILE no topo -->
-        <!-- Para usar imagem: substitua as divs abaixo por: <img src="logo.png" alt="Carlos Castro Pintor BH" style="height:44px"> -->
         <a href="#" class="logo">
-            <img src="logo.png" alt="Carlos Castro Pintor BH" style="height:44px">
-            </div>
+            <img src="logo.jpeg" alt="Logo" style="height:44px;width:auto;display:block;">
         </a>
 
         <nav>
@@ -1362,10 +1302,9 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-content">
-            <!-- [CONFIG] HERO RATING — valores de GOOGLE_RATING e GOOGLE_TOTAL -->
             <div class="hero-rating">
                 <span class="stars">★★★★★</span>
-                <span>4,9 no Google · +87 avaliações</span>
+                <span id="hero-rating-text"></span>
             </div>
 
             <h1 class="display">
@@ -1395,17 +1334,8 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
             </div>
         </div>
 
-        <!-- [CONFIG] HERO IMAGE — arquivo definido em HERO_FILE no topo -->
-        <!-- Para usar foto real: descomente a linha <img> abaixo e apague as divs visual-main e visual-secondary -->
         <div class="hero-visual">
-            <!-- <img src="hero.jpg" alt="Trabalho de pintura decorativa" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);box-shadow:var(--shadow-lift)"> -->
-            <!-- Composição artística com gradientes texturizados — substitua pelas tags acima quando tiver a foto -->
-            <div class="visual-card visual-main">
-                <span class="label">Cimento queimado</span>
-            </div>
-            <div class="visual-card visual-secondary">
-                <span class="label">Efeito mármore</span>
-            </div>
+            <img src="hero.jpeg" alt="Trabalho de pintura" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);box-shadow:var(--shadow-lift);display:block;">
             <div class="visual-badge">
                 <span class="number">+10</span>
                 <span class="label">Anos de<br>experiência</span>
@@ -1682,55 +1612,12 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
             <h2 class="display">Quem contratou <em>recomenda.</em></h2>
         </div>
 
-        <!-- [CONFIG] AVALIAÇÕES GOOGLE — edite os 3 blocos abaixo com os dados de REVIEW_1, REVIEW_2 e REVIEW_3 do topo -->
-        <div class="testimonials-track">
-            <!-- [CONFIG] REVIEW_1 -->
-            <div class="testimonial reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Excelente trabalho! Caprichoso, comprometido e atencioso em cada detalhe. Deixou tudo limpo, organizado e muito bem feito. Ótimo serviço!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">L</div><!-- [CONFIG] REVIEW_1_INITIAL -->
-                    <div class="testimonial-info">
-                        <strong>Luana Amorim.</strong><!-- [CONFIG] REVIEW_1_NAME -->
-                        <span>Apartamento · Savassi · via Google</span><!-- [CONFIG] REVIEW_1_LOCATION -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- [CONFIG] REVIEW_2 -->
-            <div class="testimonial reveal reveal-delay-1">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Profissional que responde rápido no WhatsApp, passa orçamento honesto. Trabalho de muita qualidade, usa material de primeira. Pintura externa, interna e tudo entregue sem ressalvas."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">M</div><!-- [CONFIG] REVIEW_2_INITIAL -->
-                    <div class="testimonial-info">
-                        <strong>Mariana S.</strong><!-- [CONFIG] REVIEW_2_NAME -->
-                        <span>Casa · Buritis · via Google</span><!-- [CONFIG] REVIEW_2_LOCATION -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- [CONFIG] REVIEW_3 -->
-            <div class="testimonial reveal reveal-delay-2">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Fez o cimento queimado da minha sala e ficou exatamente como eu sonhava. Atencioso, pontual, limpo. Já indiquei para três amigas que também ficaram encantadas com o resultado."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">J</div><!-- [CONFIG] REVIEW_3_INITIAL -->
-                    <div class="testimonial-info">
-                        <strong>Juliana R.</strong><!-- [CONFIG] REVIEW_3_NAME -->
-                        <span>Apartamento · Belvedere · via Google</span><!-- [CONFIG] REVIEW_3_LOCATION -->
-                    </div>
-                </div>
-            </div>
+        <div class="testimonials-track" id="reviews-track">
+            <!-- preenchido automaticamente pelo JS -->
         </div>
 
-        <!-- [CONFIG] GOOGLE_RATING e GOOGLE_TOTAL -->
-        <div class="google-badge reveal">
-            <span class="rating">5</span><!-- [CONFIG] GOOGLE_RATING -->
-            <span>
-                <span class="stars">★★★★★</span>
-                <div class="info">Baseado em +26 avaliações reais no Google</div><!-- [CONFIG] GOOGLE_TOTAL -->
-            </span>
+        <div class="google-badge reveal" id="google-badge">
+            <!-- preenchido automaticamente pelo JS -->
         </div>
     </div>
 </section>
@@ -1913,11 +1800,8 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <!-- [CONFIG] LOGO FOOTER — mesma lógica do logo do header -->
                 <a href="#" class="logo">
-                    <div class="logo-mark">C</div>
-                     <img src="logo.png" alt="Carlos Castro Pintor BH" style="height:44px">
-                    </div>
+                    <img src="logo.jpeg" alt="Logo" style="height:44px;width:auto;display:block;">
                 </a>
                 <p>Pintura residencial e técnicas decorativas em Belo Horizonte. Acabamento de luxo, atendimento humano.</p>
 
@@ -1985,48 +1869,102 @@ section { padding: var(--section-py-desktop) 0; position: relative; }
 </a>
 
 <script>
-// ============================================
-// HEADER SCROLL EFFECT
-// ============================================
+// ╔══════════════════════════════════════════════════════╗
+// ║           ✏️  ÁREA DE CONFIGURAÇÃO DO SITE           ║
+// ║      Edite apenas aqui — nada mais precisa mexer     ║
+// ╚══════════════════════════════════════════════════════╝
+
+const CONFIG = {
+
+  // Número do WhatsApp (somente dígitos, com DDI)
+  whatsapp: '5531992095724',
+
+  // Nota e total de avaliações (aparece na hero e no badge)
+  google_nota:  '5',
+  google_total: '+26',
+
+  // Avaliações do Google — adicione ou remova objetos à vontade
+  reviews: [
+    {
+      nome:     'Luana A.',
+      local:    'Apartamento · Savassi · via Google',
+      texto:    'Trabalho de pintura completa do apartamento realizado em tempo recorde, com acabamento impecável. Necessitei do serviço com urgência e fui prontamente atendido por um bom preço.',
+    },
+    {
+      nome:     'Mariana S.',
+      local:    'Casa · Buritis · via Google',
+      texto:    'Profissional que responde rápido no WhatsApp, passa orçamento honesto. Trabalho de muita qualidade, usa material de primeira. Pintura externa, interna e tudo entregue sem ressalvas.',
+    },
+    {
+      nome:     'Juliana R.',
+      local:    'Apartamento · Belvedere · via Google',
+      texto:    'Fez o cimento queimado da minha sala e ficou exatamente como eu sonhava. Atencioso, pontual, limpo. Já indiquei para três amigas que também ficaram encantadas com o resultado.',
+    },
+  ],
+
+};
+
+// ══════════════════════════════════════════════════════
+//  NÃO EDITE ABAIXO — código automático
+// ══════════════════════════════════════════════════════
+
+// Preenche hero rating
+document.getElementById('hero-rating-text').textContent =
+  `${CONFIG.google_nota} no Google · ${CONFIG.google_total} avaliações`;
+
+// Preenche cards de reviews
+const delays = ['', 'reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3'];
+const track = document.getElementById('reviews-track');
+CONFIG.reviews.forEach((r, i) => {
+  const inicial = r.nome.charAt(0).toUpperCase();
+  track.innerHTML += `
+    <div class="testimonial reveal ${delays[i] || ''}">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"${r.texto}"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">${inicial}</div>
+        <div class="testimonial-info">
+          <strong>${r.nome}</strong>
+          <span>${r.local}</span>
+        </div>
+      </div>
+    </div>`;
+});
+
+// Preenche google badge
+document.getElementById('google-badge').innerHTML = `
+  <span class="rating">${CONFIG.google_nota}</span>
+  <span>
+    <span class="stars">★★★★★</span>
+    <div class="info">Baseado em ${CONFIG.google_total} avaliações reais no Google</div>
+  </span>`;
+
+// Header scroll effect
 const header = document.getElementById('header');
 const whatsappFloat = document.getElementById('whatsappFloat');
-
 window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY > 30;
-    header.classList.toggle('scrolled', scrolled);
+    header.classList.toggle('scrolled', window.scrollY > 30);
     whatsappFloat.classList.toggle('visible', window.scrollY > 400);
 });
 
-// ============================================
-// MOBILE MENU TOGGLE
-// ============================================
+// Mobile menu
 const menuToggle = document.getElementById('menuToggle');
-menuToggle.addEventListener('click', () => {
-    document.body.classList.toggle('mobile-menu-open');
-});
+menuToggle.addEventListener('click', () => document.body.classList.toggle('mobile-menu-open'));
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('mobile-menu-open');
-    });
+    link.addEventListener('click', () => document.body.classList.remove('mobile-menu-open'));
 });
 
-// ============================================
-// FAQ ACCORDION
-// ============================================
+// FAQ accordion
 document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const wasOpen = item.classList.contains('open');
-        // Fecha todos
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        // Abre o atual se estava fechado
         if (!wasOpen) item.classList.add('open');
     });
 });
 
-// ============================================
-// SCROLL REVEAL ANIMATION
-// ============================================
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -2035,32 +1973,25 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ============================================
-// FORM SUBMISSION → WHATSAPP
-// ============================================
-// ⚠️ SUBSTITUIR número do WhatsApp aqui também
-const WHATSAPP_NUMBER = '5531999999999';
-
+// Form → WhatsApp
 document.getElementById('orcamentoForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    const nome = document.getElementById('nome').value;
+    const nome     = document.getElementById('nome').value;
     const telefone = document.getElementById('telefone').value;
-    const bairro = document.getElementById('bairro').value;
-    const servico = document.getElementById('servico').value;
+    const bairro   = document.getElementById('bairro').value;
+    const servico  = document.getElementById('servico').value;
     const mensagem = document.getElementById('mensagem').value;
 
-    let texto = `Olá Carlos! Vim pelo site e gostaria de um orçamento.%0A%0A`;
+    let texto = `Olá! Vim pelo site e gostaria de um orçamento.%0A%0A`;
     texto += `*Nome:* ${nome}%0A`;
     texto += `*WhatsApp:* ${telefone}%0A`;
     texto += `*Localização:* ${bairro}%0A`;
     texto += `*Serviço de interesse:* ${servico}`;
     if (mensagem) texto += `%0A%0A*Detalhes:* ${mensagem}`;
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`;
-    window.open(url, '_blank');
+    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${texto}`, '_blank');
 });
 
 </script>
